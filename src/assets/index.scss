@@ -1,0 +1,51 @@
+@import "bootstrap/dist/css/bootstrap.css";
+@import './scss/app';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  background: #01010c;
+  color: #fff;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  @apply dark:bg-[#01010c] dark:text-white;
+  header {
+    @apply relative bg-[#fff] text-black dark:bg-[#01010c] dark:text-white;
+    .navBar {
+      @apply flex justify-between items-center border dark:border-none shadow w-full px-8 py-4 h-14 dark:bg-slate-950;
+    }
+    .navBarMenu {
+      @apply bg-[#fff] text-black dark:bg-[#01010c] dark:text-white transition-opacity fixed h-screen w-full z-20 left-0 top-0;
+      .navBarMenuHeader {
+        @apply flex justify-between items-center border dark:border-none shadow-lg px-8 py-4 h-14;
+      }
+      .navBarMenuText {
+        @apply grid justify-center content-around gap-4 p-24 dark:text-white text-2xl text-center;
+      }
+    }
+  }
+  main {
+    @apply p-8 w-full grid gap-16 place-items-center;
+    section:first-child {
+      @apply mt-8;
+    }
+  }
+  footer {
+    @apply bg-zinc-900 p-4 mt-8 text-center gridCenter text-white font-extrabold;
+  }
+}
+

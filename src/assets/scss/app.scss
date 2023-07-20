@@ -1,0 +1,70 @@
+@import 'tw';
+
+section {
+  @apply gridCenter w-full gap-4;
+
+  // All Section's Header
+  .header {
+    @apply font-extrabold text-3xl text-black dark:text-white lg:text-6xl;
+    -webkit-text-stroke-width: 2px;
+  }
+
+  // Skills Carousel
+  .carousel {
+    @apply relative dark:bg-slate-950 w-[300px] h-[250px] md:w-[600px] md:h-[400px] gridCenter border shadow-xl rounded-2xl;
+    .trigger {
+      @apply absolute flex justify-between w-full font-extrabold text-3xl top-1/2 -translate-y-1/2;
+     .btn {
+        @apply rounded bg-white shadow-xl text-black gridCenter border p-1 font-extrabold text-2xl;
+       -webkit-text-stroke-width: 2px;
+      }
+    }
+    .caption {
+      @apply text-slate-400 font-thin text-sm;
+    }
+  }
+
+  // About Info
+  article {
+    @apply gridCenter md:flex justify-between flex-row-reverse gap-2 md:w-[700px] lg:w-[1000px];
+
+    div {
+      @apply gridCenter md:place-items-start text-center mt-4;
+    }
+    .img {
+      @apply mx-auto md:mx-0 shadow-2xl dark:bg-slate-950 rounded-full md:w-56 md:h-56 lg:w-72 lg:h-72;
+    }
+
+    // About Bio
+    .bio {
+      h2 {
+        @apply textGradient font-extrabold text-3xl lg:text-6xl;
+        font-weight: bolder;
+        -webkit-text-stroke-width: 2px;
+      }
+      .info {
+        @apply text-slate-400 text-center font-light mt-4;
+      }
+    }
+  }
+
+  // Contact Form
+  .form {
+    @apply grid place-items-start p-4 shadow border dark:bg-slate-950 dark:text-white w-[300px] h-fit rounded;
+    label {
+      @apply font-bold mb-1;
+    }
+    input, textarea {
+      @apply mb-2 dark:bg-zinc-700 text-slate-400 w-[265px] border p-2 shadow-sm rounded;
+    }
+    #submit {
+      @apply bgGradient text-white font-extrabold py-2 px-4 rounded mt-2;
+    }
+  }
+
+  // Contact Me Button
+  #contactBtn {
+    @apply gridCenter rounded px-2 h-12 w-44 text-white font-extrabold tracking-wider mt-4 bgGradient text-sm md:mt-12;
+  }
+}
+

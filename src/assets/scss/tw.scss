@@ -1,0 +1,11 @@
+.gridCenter {
+  @apply grid place-items-center;
+}
+
+.textGradient {
+  @apply bg-gradient-to-r bg-clip-text text-transparent from-teal-400 via-blue-500 via-100% to-transparent;
+}
+
+.bgGradient {
+  @apply bg-gradient-to-r from-teal-400 to-blue-500;
+}
